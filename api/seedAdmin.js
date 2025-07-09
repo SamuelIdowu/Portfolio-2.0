@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs");
 const User = require("./models/User");
 
 const MONGO_URI =
-  process.env.MONGO_URI || "mongodb://localhost:27017/portfolio";
+  process.env.MONGO_URI ;
 
 const adminUser = {
   username: "admin",

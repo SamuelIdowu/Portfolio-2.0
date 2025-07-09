@@ -3,7 +3,7 @@ const Project = require("./models/Project");
 const Skill = require("./models/Skill");
 
 const MONGO_URI =
-  process.env.MONGO_URI || "mongodb://localhost:27017/portfolio";
+  process.env.MONGO_URI;
 
 const projects = [
   {
