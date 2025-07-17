@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = "https://samuelidowu-2-0.onrender.com/api";
 
 const AdminDashboard = () => {
   const [projectCount, setProjectCount] = useState(0);
