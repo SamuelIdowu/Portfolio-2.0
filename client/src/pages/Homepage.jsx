@@ -10,7 +10,7 @@ import ProjectModal from "../components/project/ProjectModal";
 import { Helmet } from "react-helmet-async";
 // import avatar from "../assets/react.svg"; // Replace with your avatar image
 
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = "https://samuelidowu-2-0.onrender.com/api/";
 
 const Homepage = () => {
   // Modal state for project details

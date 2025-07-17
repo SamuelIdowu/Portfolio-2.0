@@ -30,3 +30,8 @@ async function seedAdmin() {
 }
 
 seedAdmin();
+
+
+
+
+// https://samuelidowu-2-0.onrender.com/
