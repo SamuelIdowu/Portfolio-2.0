@@ -10,8 +10,6 @@ import ProjectModal from "../components/project/ProjectModal";
 import { Helmet } from "react-helmet-async";
 // import avatar from "../assets/react.svg"; // Replace with your avatar image
 
-const API_BASE = "https://samuelidowu-2-0.onrender.com/api/";
-
 const Homepage = () => {
   // Modal state for project details
   const [modalProject, setModalProject] = useState(null);
@@ -30,7 +28,7 @@ const Homepage = () => {
         />
         <meta
           property="og:title"
-          content="Samuel Victor | MERN, AI, Web3 Portfolio"
+          content="Samuel Idowu | MERN, AI, Web3 Portfolio"
         />
         <meta
           property="og:description"
