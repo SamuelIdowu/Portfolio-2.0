@@ -3,22 +3,22 @@ import { FaTwitter, FaGithub, FaLinkedin, FaRegEnvelope } from "react-icons/fa";
 
 const CONTACTS = [
   {
-    href: "https://twitter.com/yourhandle",
+    href: "https://twitter.com/samuelidowu_6",
     label: "X (Twitter)",
     icon: <FaTwitter size={32} />,
   },
   {
-    href: "https://github.com/yourhandle",
+    href: "https://github.com/SamuelIdowu",
     label: "GitHub",
     icon: <FaGithub size={32} />,
   },
   {
-    href: "https://linkedin.com/in/yourhandle",
+    href: "https://linkedin.com/in/samueltemiloluwaidowu",
     label: "LinkedIn",
     icon: <FaLinkedin size={32} />,
   },
   {
-    href: "mailto:samuel.victor@email.com",
+    href: "thenasis2@gmail.com",
     label: "Email",
     icon: <FaRegEnvelope size={32} />,
   },
@@ -26,7 +26,9 @@ const CONTACTS = [
 
 const ContactSection = () => (
   <section className="card contact-section">
-    <div className="contact-title">Get in touch</div>
+    <div className="contact-title">
+      <h2>Let's Connect or Collaborate</h2>
+    </div>
     <div className="contact-icons">
       {CONTACTS.map((c) => (
         <a

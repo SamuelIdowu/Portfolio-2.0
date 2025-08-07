@@ -24,7 +24,7 @@ const Homepage = () => {
         />
         <meta
           name="keywords"
-          content="Samuel Victor, MERN, AI, Web3, Portfolio, Developer, Mechatronics"
+          content="Samuel Idowu, MERN, AI, Web3, Portfolio, Developer, Mechatronics"
         />
         <meta
           property="og:title"
@@ -50,8 +50,8 @@ const Homepage = () => {
               "url": "https://yourdomain.com/",
               "image": "https://yourdomain.com/og-image.jpg",
               "sameAs": [
-                "https://github.com/samuelvictor",
-                "https://linkedin.com/in/samuelvictor"
+                "https://github.com/SamuelIdowu",
+                "https://linkedin.com/in/samueltemiloluwaidowu"
               ],
               "jobTitle": "Full Stack Developer",
               "worksFor": {
