@@ -1,10 +1,14 @@
 const express = require("express");
 const router = express.Router();
 const {
+  createProject,
   getAllProjects,
   deleteProject,
   updateProject,
 } = require("../controllers/projectController");
+
+// POST /api/projects
+router.post("/", createProject);
 
 // GET /api/projects
 router.get("/", getAllProjects);
