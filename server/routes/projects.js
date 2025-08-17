@@ -5,7 +5,7 @@ const {
   getAllProjects,
   deleteProject,
   updateProject,
-} = require("../controllers/projectController");
+} = require("../controllers/supabase/projectController");
 
 // POST /api/projects
 router.post("/", createProject);

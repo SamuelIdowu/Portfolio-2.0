@@ -1,8 +1,8 @@
 const express = require("express");
-const mongoose = require("mongoose");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const path = require("path");
+const supabase = require("./config/supabase");
 
 dotenv.config();
 
@@ -25,13 +25,23 @@ app.get("/", (req, res) => {
   res.send("API is running...");
 });
 
-mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.error("MongoDB connection error:", err));
+// Test Supabase connection
+(async () => {
+  try {
+    const { data, error } = await supabase
+      .from('projects')
+      .select('count', { count: 'exact', head: true });
+    
+    if (error) {
+      console.error('❌ Supabase connection error:', error.message);
+    } else {
+      console.log('✅ Supabase connected successfully');
+    }
+  } catch (err) {
+    console.error('❌ Supabase connection failed:', err.message);
+    console.log('⚠️  Please check your Supabase environment variables');
+  }
+})();
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

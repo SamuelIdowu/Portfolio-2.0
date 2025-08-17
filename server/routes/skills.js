@@ -5,7 +5,7 @@ const {
   getAllSkills,
   deleteSkill,
   updateSkill,
-} = require("../controllers/skillController");
+} = require("../controllers/supabase/skillController");
 
 // POST /api/skills
 router.post("/", createSkill);
