@@ -62,15 +62,15 @@ const ProjectsSection = ({ onProjectClick }) => {
       : projects.filter((p) => p.category === selected);
 
   return (
-    <section className="section" id="projects">
-      <h3>
-        <FaRocket /> Featured Projects
+    <section className="lg:col-span-2 p-8 rounded-lg shadow-lg bg-gray-800" id="projects">
+      <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-3 border-b pb-4 border-gray-700">
+        <FaRocket className="text-blue-400" /> Featured Projects
       </h3>
-      <div className="filter-bar">
+      <div className="flex flex-wrap gap-2 mb-6">
         {categories.map((cat) => (
           <button
             key={cat}
-            className={`filter-btn${selected === cat ? " active" : ""}`}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selected === cat ? "bg-blue-600 text-white shadow-md" : "bg-gray-700 text-gray-300 hover:bg-gray-600"}`}
             onClick={() => setSelected(cat)}
           >
             {cat}
@@ -82,48 +82,48 @@ const ProjectsSection = ({ onProjectClick }) => {
       ) : error ? (
         <div style={{ color: "red" }}>{error}</div>
       ) : (
-        <div className="projects-container">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {filteredProjects.map((p) => (
             <div
-              className="project-item"
+              className="bg-gray-700 rounded-lg p-6 shadow-md transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105 flex flex-col"
               key={p._id}
               style={{ cursor: "pointer" }}
             >
-              <div className="project-header">
+              <div className="flex items-center gap-4 mb-4">
                 <div
-                  className="project-icon"
+                  className="w-14 h-14 rounded-lg flex items-center justify-center text-white text-2xl flex-shrink-0"
                   style={{
                     background: gradientMap[p.category] || gradientMap.Default,
                   }}
                 >
                   {iconMap[p.category] || <FaRocket />}
                 </div>
-                <div className="project-info">
-                  <h4>{p.title}</h4>
-                  <p>{p.description}</p>
+                <div className="flex-1">
+                  <h4 className="text-xl font-semibold text-white mb-1">{p.title}</h4>
+                  <p className="text-gray-300 text-sm leading-relaxed">{p.description}</p>
                 </div>
               </div>
-              <div className="project-tech">
+              <div className="flex flex-wrap gap-2 mb-4">
                 {(p.technologies || []).map((t) => (
-                  <span className="tech-tag" key={t}>
+                  <span className="bg-gray-600 text-gray-200 px-3 py-1 rounded-full text-xs font-medium" key={t}>
                     {t}
                   </span>
                 ))}
               </div>
-              <div className="project-actions">
+              <div className="flex gap-3 mt-auto">
                 <button
-                  className="project-action primary"
+                  className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-medium transition-all duration-300 hover:bg-blue-700 shadow-md"
                   onClick={() => onProjectClick(p)}
                 >
-                  <FaRocket /> Details
+                  <FaRocket className="mr-2" /> Details
                 </button>
                 <a
-                  className="project-action whatsapp"
+                  className="flex items-center justify-center px-4 py-2 bg-green-600 text-white rounded-full text-sm font-medium transition-all duration-300 hover:bg-green-700 shadow-md"
                   href="https://wa.me/+2348144604146"
                   target="_blank"
                   rel="noopener"
                 >
-                  <FaRocket /> Discuss
+                  <FaRocket className="mr-2" /> Discuss
                 </a>
               </div>
             </div>

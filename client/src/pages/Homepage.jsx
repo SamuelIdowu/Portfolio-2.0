@@ -15,7 +15,7 @@ const Homepage = () => {
   const [modalProject, setModalProject] = useState(null);
 
   return (
-    <div className="container">
+    <div className="container mx-auto p-4 lg:p-8">
       <Helmet>
         <title>Samuel Idowu | MERN, AI, Web3 Portfolio</title>
         <meta
@@ -62,13 +62,15 @@ const Homepage = () => {
           `}
         </script>
       </Helmet>
-      <HeroSection />
-      <SkillsGrid />
-      <ProjectsSection onProjectClick={setModalProject} />
-      <ExperienceSection />
-      <EducationSection />
-      <CVSection />
-      <ContactSection />
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <HeroSection />
+        <SkillsGrid />
+        <ProjectsSection onProjectClick={setModalProject} />
+        <ExperienceSection />
+        <EducationSection />
+        <CVSection />
+        <ContactSection />
+      </div>
       <ProjectModal
         project={modalProject}
         onClose={() => setModalProject(null)}
