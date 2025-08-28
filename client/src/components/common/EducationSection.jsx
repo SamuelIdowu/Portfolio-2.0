@@ -5,8 +5,8 @@ const education = [
   {
     date: "2021 - 2027",
     degree: "B.Eng In Mechatronics Engineering",
-    institution: "Stanford University",
-    desc: "Focused on Artificial Intelligence and Distributed Systems. Graduated with Honors.",
+    institution: "Federal University Oye Ekiti",
+    desc: "Focus on building mechanical and electrical systems as well as IOT and embedded systems.",
   },
   {
     date: "2023",
