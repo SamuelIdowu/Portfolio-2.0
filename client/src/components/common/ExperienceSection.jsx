@@ -2,6 +2,18 @@ import React from "react";
 import { FaBriefcase, FaCalendar } from "react-icons/fa";
 
 const experiences = [
+      {
+    date: "January 2025 - Present",
+    role: "Software Engineer",
+    company: "JZ Holdings",
+    desc: "Engineering dynamic websites and softwares from concept to deployment, featuring user-centric design and scalable architecture.",
+  },
+    {
+    date: "August 2025 - Present",
+    role: "Frontend Developer Intern",
+    company: "Reposeay",
+    desc: "Implementing responsive user interface, leading the development of key frontend features from concept to production",
+  },
   {
     date: "March 2025",
     role: "Freelance Fullstack Developer",
@@ -15,11 +27,12 @@ const experiences = [
     desc: "Designed and developed a custom, responsive website for an artist using EJS, Node.js, Express, and MongoDB, improving website performance and load time.",
   },
   {
-    date: "Jun 2025 - Present",
+    date: "June 2025 - Present",
     role: "Solo Founder",
     company: "Contentworks",
     desc: "Architected and developed a comprehensive content creation workspace SaaS from the ground up, utilizing Next.js, TypeScript, and a Node.js backend with Supabase",
   },
+
 ];
 
 const ExperienceSection = () => (
